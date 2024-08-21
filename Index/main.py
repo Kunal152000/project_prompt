@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-openAiClient = OpenAI(api_key="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")
+# openAiClient = OpenAI(api_key="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")
 
 @app.route("/",methods=["POST"])
 def get_data():

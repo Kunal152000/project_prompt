@@ -1,10 +1,11 @@
 from flask import  Flask,request, jsonify
 from openai import OpenAI
+import os
 import requests
 
 app = Flask(__name__)
 
-# openAiClient = OpenAI(api_key="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")
+openAiClient = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 @app.route("/",methods=["POST"])
 def get_data():
